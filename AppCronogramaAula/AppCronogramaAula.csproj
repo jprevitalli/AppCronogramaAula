@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{07F541AB-0191-4769-88AF-348ADB278697}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AppCronogramaAula</RootNamespace>
+    <AssemblyName>AppCronogramaAula</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\AlunoController.cs" />
+    <Compile Include="Controller\CronoController.cs" />
+    <Compile Include="Controller\ProfessorController.cs" />
+    <Compile Include="Controller\SalaController.cs" />
+    <Compile Include="Controller\TurmaController.cs" />
+    <Compile Include="Controller\UcController.cs" />
+    <Compile Include="Model\Aluno.cs" />
+    <Compile Include="Model\Conexao.cs" />
+    <Compile Include="Model\Cronograma.cs" />
+    <Compile Include="Model\Professor.cs" />
+    <Compile Include="Model\Sala.cs" />
+    <Compile Include="Model\Turma.cs" />
+    <Compile Include="Model\Uc.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\TelaBuscaProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaBuscaProfessor.Designer.cs">
+      <DependentUpon>TelaBuscaProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaBuscaSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaBuscaSala.Designer.cs">
+      <DependentUpon>TelaBuscaSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaBuscaTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaBuscaTurma.Designer.cs">
+      <DependentUpon>TelaBuscaTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaBuscaUc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaBuscaUc.Designer.cs">
+      <DependentUpon>TelaBuscaUc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaCadastroAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaCadastroAluno.Designer.cs">
+      <DependentUpon>TelaCadastroAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaBuscaAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaBuscaAluno.Designer.cs">
+      <DependentUpon>TelaBuscaAluno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaCadastroProfessor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaCadastroProfessor.Designer.cs">
+      <DependentUpon>TelaCadastroProfessor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaCadastroSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaCadastroSala.Designer.cs">
+      <DependentUpon>TelaCadastroSala.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaCadastroTurma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaCadastroTurma.Designer.cs">
+      <DependentUpon>TelaCadastroTurma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TelaCadastroUc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TelaCadastroUc.Designer.cs">
+      <DependentUpon>TelaCadastroUc.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\TelaBuscaProfessor.resx">
+      <DependentUpon>TelaBuscaProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaBuscaSala.resx">
+      <DependentUpon>TelaBuscaSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaBuscaTurma.resx">
+      <DependentUpon>TelaBuscaTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaBuscaUc.resx">
+      <DependentUpon>TelaBuscaUc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaCadastroAluno.resx">
+      <DependentUpon>TelaCadastroAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaBuscaAluno.resx">
+      <DependentUpon>TelaBuscaAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaCadastroProfessor.resx">
+      <DependentUpon>TelaCadastroProfessor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaCadastroSala.resx">
+      <DependentUpon>TelaCadastroSala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaCadastroTurma.resx">
+      <DependentUpon>TelaCadastroTurma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TelaCadastroUc.resx">
+      <DependentUpon>TelaCadastroUc.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
